@@ -2,12 +2,24 @@
 Team members: Julien Samuel Eddy Guimez, Lydia Chung, Christopher Harm, Vasishta Akinapalli, Nick McClure
 
 ## Completed Work
-The first environment “Beach” is complete. It features palm trees and moving waves. The wave system was added to be easily controllable, so that the level of the water can be controlled and waves can be intensified or weakened depending on the focus state of the user. This is a future feature that will be implemented once data streaming from the EEG headband is fully implemented.
+During this final stretch of progress before the end of the semester, our group worked on things such as implementing models, animations, and rays for the VR hands; adding a canvas that will become a menu and can currently display text from a file that is read using a script; improvements to our Unity scene, and EEG data processing progress. 
 
-With regards to the feedback algorithm that will be used to drive UX elements such as the weather and scenery objects, we are still in the process of retrieving and conditioning the data for input into the feedback algorithm. The Muse 2 headband offers an array of sensors (eeg, accelerometer, gyroscope, and ppg) that we hope to incorporate into the feedback algorithm in order to create the most dynamic and engaging experience for the end-user. We are further refining the preprocessing and conditioning algorithm in order to isolate brain signal from noise that is inherent with dry electrode EEG sensors. So far the sensor data is pre-processed into three main stages: noise reduction (a lowpass butterworth filter), normalization (z-score), and transformation into the frequency-domain (Fast Fourier Transform FFT). Based on the spectral components in the frequency representation we are able to interpret signal based on the classifications of brain wave signals (Delta: 1 - 4 Hz, Theta: 4 - 8 Hz, Alpha: 8 - 13 Hz, Beta 13 - 30 Hz, GammaL 30 - 44 Hz).
+The VR hands in our project before were just cubes to show where they were, now they have a model that is animated based on what buttons the user is pressing. They also have an interactor ray that will be used to interact with objects in the application such as menus and possibly items. When implementing the rays, there are still issues with getting it to interact with the other objects in the scene, but this will be resolved with more research and trial and error. 
+
+There is currently a rudimentary canvas that will become a menu system. This canvas can display text that is read from a file using a C# script. In future iterations of the project, canvases will be used in a start scene, and in an options menu. This also means that we will be implementing scene switching. The user will choose their options in the start scene, and when they hit start, the ten minute guided meditation will begin and it will switch the scene to the correct environment that they selected. 
+
+There is some progress on a weather system. Currently, we have two separate skyboxes: one for sunny weather, and one for stormy weather. In the future, when the EEG data is read by Unity, we will have a weather system that includes particles and automatic skybox and water level changes.
+
+Audio systems were recently implemented. Their functionality extends to a soothing ambient sound whose volume will shift according to focus level, so as not to disturb users who are deep in meditation. Wind particles will also be added to give a visual feedback to the wind audio for those who may be hearing-impaired. 
 
 ## Known Bugs
-The Oculus controllers are cubes because we have not found a suitable model for them yet.
+Bad PPG signal, minimal oscillation to perform peak detection and peak to peak analysis
+
+There is no easing function currently so a drastic change in focus level will look really unnatural
+
+Hand rays don’t interact with canvas elements
+
+PPG stream not present when using bluemuse on LSL, windows blocks LSL from communicating with bluemuse to python program if bluemuse isn't given admin
 
 Although we imported sound files into the scene, there is no audio playing yet, because we have not implemented an audio controller.
 

@@ -7,6 +7,7 @@ public class LeftHandMenu : MonoBehaviour
 {
   public GameObject menuPanel;
   public InputActionReference openMenuAction;
+  public Timer timer;
   private void Awake()
   {
     openMenuAction.action.Enable();
@@ -25,6 +26,7 @@ public class LeftHandMenu : MonoBehaviour
   private void ToggleMenu(InputAction.CallbackContext context)
   {
     menuPanel.SetActive(!menuPanel.activeSelf);
+    timer.paused = menuPanel.activeSelf;
   }
 
   private void OnDeviceChange(InputDevice device, InputDeviceChange change)

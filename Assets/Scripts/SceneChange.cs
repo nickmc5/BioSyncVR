@@ -9,6 +9,10 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
         Debug.Log("Loading scene: " + sceneName);
+        if (sceneName == "BeachScene")
+        {
+            Debug.Log(SessionSettings.sessionLength);
+        }
     }
 
     public void UnloadScene(string sceneName)

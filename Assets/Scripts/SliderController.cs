@@ -10,6 +10,10 @@ public class SliderController : MonoBehaviour
     public Slider slider;
 
     void Update() {
+        if (SessionSettings.sessionLength != 5 * (int) slider.value)
+        {
+            Debug.Log("Slider got changed to " + slider.value);
+        }
         SessionSettings.sessionLength = 5 * (int) slider.value;
     }
 

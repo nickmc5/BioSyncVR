@@ -3,11 +3,16 @@ using System.Collections;
 
 public class Timer: MonoBehaviour {
     // countdown start in seconds
-    public static float targetTime = 60 * (float) SessionSettings.sessionLength; 
+    public static float targetTime; 
     public bool paused = false;
     public SceneChange sceneChanger;
-    private float currentTime = targetTime;
+    private float currentTime;
 
+    void Awake() 
+    {
+        targetTime = 60 * (float) SessionSettings.sessionLength;
+        currentTime = targetTime; 
+    }
     void Update() {
         if (!paused) {
             if (currentTime <= 0.0f) {
@@ -16,6 +21,8 @@ public class Timer: MonoBehaviour {
                 currentTime -= Time.deltaTime;
             }
         }
+
+        //Debug.Log(currentTime);
     }
 
     void timerEnded()

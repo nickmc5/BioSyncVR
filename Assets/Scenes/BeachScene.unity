@@ -1360,6 +1360,7 @@ MonoBehaviour:
   rainScript: {fileID: 1537067826}
   maxRainIntensity: 0.3
   windParticles: {fileID: 1336105743}
+  waterScript: {fileID: 114943682713657399}
 --- !u!4 &525016586
 Transform:
   m_ObjectHideFlags: 0
@@ -1375,44 +1376,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!84 &540081711
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDepthMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1 &716386814
 GameObject:
   m_ObjectHideFlags: 0
@@ -8559,7 +8522,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.895
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8591,6 +8554,44 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 56271751}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &1477785179
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterDepthMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1 &1536205883
 GameObject:
   m_ObjectHideFlags: 0
@@ -33312,45 +33313,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   computeOverride: 0
-  _depthTex: {fileID: 540081711}
+  _depthTex: {fileID: 1477785179}
   bakedDepthTex: {fileID: 0}
   _waves:
-  - amplitude: 0.30540264
+  - amplitude: 0.46319395
     direction: -157.6966
     wavelength: 3.9317474
     origin:
       x: 0
       y: 0
     onmiDir: 0
-  - amplitude: 0.38381416
+  - amplitude: 0.5821181
     direction: -151.68127
     wavelength: 5.0679083
     origin:
       x: 0
       y: 0
     onmiDir: 0
-  - amplitude: 0.56254816
+  - amplitude: 0.853198
     direction: -248.20753
     wavelength: 4.8436303
     origin:
       x: 0
       y: 0
     onmiDir: 0
-  - amplitude: 0.5496996
+  - amplitude: 0.83371097
     direction: -157.03645
     wavelength: 7.4353476
     origin:
       x: 0
       y: 0
     onmiDir: 0
-  - amplitude: 0.600147
+  - amplitude: 0.9102229
     direction: -109.31301
     wavelength: 9.009473
     origin:
       x: 0
       y: 0
     onmiDir: 0
-  - amplitude: 0.82138336
+  - amplitude: 1.2457646
     direction: -185.72478
     wavelength: 14.354873
     origin:

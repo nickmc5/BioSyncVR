@@ -7,7 +7,7 @@ public class FocusManager : MonoBehaviour
 {
     public static FocusManager Instance;
 
-    [SerializeField] private Slider focusSlider;
+    [SerializeField] private byte[] receiveBuffer;
     [SerializeField] private Material skyboxMaterial;
     [SerializeField] private Cubemap sunnySkybox;
     [SerializeField] private Cubemap stormySkybox;
@@ -39,15 +39,15 @@ public class FocusManager : MonoBehaviour
         RenderSettings.skybox = skyboxMaterial;
 
         SetInitialFocusLevel();
-        focusSlider.onValueChanged.AddListener(UpdateFocusLevel);
+        receiveBuffer.onValueChanged.AddListener(UpdateFocusLevel);
     }
 
     private void SetInitialFocusLevel()
     {
         focusLevel = Mathf.Clamp01(initialFocusLevel);
-        if (focusSlider != null)
+        if (receiveBuffer != null)
         {
-            focusSlider.value = focusLevel;
+            receiveBuffer.value = focusLevel;
         }
         UpdateSkyboxBlend();
         UpdateRainIntensity();
@@ -145,9 +145,9 @@ public class FocusManager : MonoBehaviour
     public void SetFocusLevel(float newLevel)
     {
         focusLevel = Mathf.Clamp01(newLevel);
-        if (focusSlider != null)
+        if (receiveBuffer != null)
         {
-            focusSlider.value = focusLevel;
+            receiveBuffer.value = focusLevel;
         }
         UpdateSkyboxBlend();
         UpdateRainIntensity();

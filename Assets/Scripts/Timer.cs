@@ -6,7 +6,7 @@ public class Timer: MonoBehaviour {
     public static float targetTime; 
     public bool paused = false;
     public SceneChange sceneChanger;
-    private float currentTime;
+    public static float currentTime;
 
     void Awake() 
     {

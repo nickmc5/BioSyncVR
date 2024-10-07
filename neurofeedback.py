@@ -97,7 +97,7 @@ if __name__ == "__main__":
     print('Press Ctrl-C in the console to break the while loop.')
 
     connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    connection.bind('localhost', 12345)
+    connection.bind(('localhost', 12345))
     connection.listen(1)
 
     pipe, add = connection.accept()
@@ -145,7 +145,7 @@ if __name__ == "__main__":
             alpha_metric = smooth_band_powers[Band.Alpha] / \
                 smooth_band_powers[Band.Delta]
             print('Alpha Relaxation: ', alpha_metric)
-            pipe.sendall("{alpha_metric}")
+            pipe.sendall(str(alpha_metric).encode('utf-8'))
     
 
 

@@ -47,28 +47,17 @@ BioSync VR is a virtual reality meditation application that uses a Muse EEG head
 
 - PCVR setup with a VR headset compatible with SteamVR
 - [Minimum system specifications for running VR applications]
-- Muse EEG headset (optional, but recommended for full experience)
+- Muse EEG headset (optional, but highly recommended for full experience)
 
 ## Troubleshooting
 
 [Common issues and their solutions]
 
-## Privacy and Data Usage
-
-[Information about how user data is collected, stored, and used]
 
 ## Credits
 
-[List of team members, contributors, and any third-party assets or libraries used]
-
-## Version History
-
-[List of versions with release dates and major changes]
-
-## License
-
-[License information for the project]
-
-## Contact
-
-[Contact information for support or inquiries]
+- Julien Samuel Eddy Guimez
+- Lydia Chung
+- Nick McClure
+- Vasishta Akinapalli
+- Christopher Ham

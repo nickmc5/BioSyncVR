@@ -43,14 +43,8 @@ public class Client : MonoBehaviour
         while(true){
             receiver.Receive(buff);
             string outputString = Encoding.UTF8.GetString(buff, 0, 256);
-            int i = 0;
-            while(true){
-                if(outputString[i] == '#') {
-                    break;
-                }
-                i = i + 1;
-            }
-            string goodformat = outputString.remove(i);
+            int i = outputString.IndexOf('#');
+            string goodformat = outputString.Substring(0,i);
             float outputFloat = float.Parse(goodformat, CultureInfo.InvariantCulture.NumberFormat);
 
         }

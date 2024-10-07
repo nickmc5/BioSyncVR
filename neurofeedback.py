@@ -145,7 +145,12 @@ if __name__ == "__main__":
             alpha_metric = smooth_band_powers[Band.Alpha] / \
                 smooth_band_powers[Band.Delta]
             print('Alpha Relaxation: ', alpha_metric)
-            pipe.sendall(str(alpha_metric).encode('utf-8'))
+            
+            hold = str(alpha_metric)
+            remaining = 256 - len(hold)
+            padding = remaining * "#"
+            sendee = hold + padding
+            pipe.sendall(str(sendee).encode('utf-8'))
     
 
 

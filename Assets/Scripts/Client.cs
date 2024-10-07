@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 
 
 public class Client : MonoBehaviour
@@ -31,56 +32,30 @@ public class Client : MonoBehaviour
 
     private void Start()
     {
-        tcp = new TCP();
-    }
+        IPHostEntry hostname = Dns.GetHostEntry(Dns.GetHostName());
+        IPEndPoint endp = new IPEndPoint(hostname.AddressList[0], 12345);
 
-    public void ConnectToServer()
-    {
-        tcp.Connect();
-    }
+        Socket receiver = new Socket(hostname.AddressList[0].AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+        receiver.Connect(endp);
 
-    public class TCP
-    {
-        public TcpClient socket;
+        byte[] buff = new byte[256];
 
-        private NetworkStream stream;
-        public static byte[] receiveBuffer;
-
-        public void Connect()
-        {
-            socket = new TcpClient
-            {
-                ReceiveBufferSize = dataBufferSize,
-                SendBufferSize = dataBufferSize
-            };
-
-            receiveBuffer = new byte[dataBufferSize];
-            socket.BeginConnect(instance.ip, instance.port, ConnectCallback, socket);
-        }
-
-        private void ConnectCallback(IAsyncResult _result)
-        {
-            socket.EndConnect(_result);
-
-            if (!socket.Connected)
-            {
-                return;
+        while(true){
+            receiver.Receive(buff);
+            string outputString = Encoding.UTF8.GetString(buff, 0, 256);
+            int i = 0;
+            while(true){
+                if(outputString[i] == '#') {
+                    break;
+                }
+                i = i + 1;
             }
+            string goodformat = outputString.remove(i);
+            float outputFloat = float.Parse(goodformat, CultureInfo.InvariantCulture.NumberFormat);
 
-            stream = socket.GetStream();
-            stream.BeginRead(receiveBuffer, 0, dataBufferSize, ReceiveCallback, null);
-        }
-        private void ReceiveCallback(IAsyncResult _result)
-        {
-            try
-            {
-
-            }
-            catch
-            {
-                // TODO: disconnect
-            }
         }
     }
 
+
+  
 }

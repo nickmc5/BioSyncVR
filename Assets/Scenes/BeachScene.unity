@@ -1107,8 +1107,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1336105741}
+  m_Children: []
   m_Father: {fileID: 434434691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &505659304
@@ -1352,7 +1351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa6838b6245cf84e91f311070075374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusSlider: {fileID: 1366796618}
+  receiveBuffer: 
   skyboxMaterial: {fileID: 2100000, guid: 31959cc76ab50364daf10c9654cb852b, type: 2}
   sunnySkybox: {fileID: 8900000, guid: 99af420a4ccafa74abdc47436d8b0685, type: 3}
   stormySkybox: {fileID: 8900000, guid: 762f22ba43541df4e95e0e7126e8d96c, type: 3}
@@ -2283,6 +2282,7 @@ Transform:
   - {fileID: 107160525}
   - {fileID: 543450652770729534}
   - {fileID: 543450653038594254}
+  - {fileID: 1336105741}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1062507228
@@ -3641,12 +3641,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336105740}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: -2.6068268, y: -7.14, z: 35.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 505659303}
+  m_Father: {fileID: 966800342}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
 --- !u!199 &1336105742
 ParticleSystemRenderer:
@@ -3670,7 +3670,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
+  - {fileID: 2100000, guid: c8c162af3fac7f145b8d1295eff18b1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3714,7 +3714,7 @@ ParticleSystemRenderer:
   m_VertexStreams: 00010304
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}

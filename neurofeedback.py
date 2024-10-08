@@ -97,10 +97,8 @@ if __name__ == "__main__":
     print('Press Ctrl-C in the console to break the while loop.')
 
     connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    connection.bind(('localhost', 12345))
-    connection.listen(1)
+    connection.connect(("127.0.0.1", 12345))
 
-    pipe, add = connection.accept()
 
 
 
@@ -146,11 +144,10 @@ if __name__ == "__main__":
                 smooth_band_powers[Band.Delta]
             print('Alpha Relaxation: ', alpha_metric)
             
-            hold = str(alpha_metric)
-            remaining = 256 - len(hold)
-            padding = remaining * "#"
-            sendee = hold + padding
-            pipe.sendall(str(sendee).encode('utf-8'))
+
+            sendee = f"{alpha_metric:.6f}".ljust(256, "#")
+
+            connection.sendall(str(sendee).encode('utf-8'))
     
 
 
@@ -172,5 +169,4 @@ if __name__ == "__main__":
 
     except KeyboardInterrupt:
         print('Closing!')
-        pipe.close()
         connection.close()

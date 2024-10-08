@@ -52,7 +52,7 @@ BioSync VR is a virtual reality meditation application that uses a Muse EEG head
 ## Troubleshooting
 
 - Users using SteamVR or Virtual Desktop with a Quest standalone headset may have different button bindings. Check the button bindings set by SteamVR in the pause menu. Pause menu default controls should be (X+Y) on left controller.
-
+- This is a primarily stationary experience. Standing, sitting, or laying down is the expected method of experiencing BioSync VR. Unexpected behavior may occur if a user strays very far from the center of the meditative environment.
 
 ## Credits
 

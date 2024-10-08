@@ -279,7 +279,7 @@ namespace DigitalRuby.RainMaker
 
             if (RainFallParticleSystem == null)
             {
-                Debug.LogError("Rain fall particle system must be set to a particle system");
+                //Debug.LogError("Rain fall particle system must be set to a particle system");
                 return;
             }
 

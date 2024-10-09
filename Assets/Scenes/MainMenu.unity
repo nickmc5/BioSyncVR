@@ -2822,7 +2822,7 @@ MonoBehaviour:
   image2: {fileID: 534139600}
   outline1: {fileID: 521492191}
   outline2: {fileID: 534139603}
-  sceneChanger: {fileID: 0}
+  sceneChanger: {fileID: 875356862}
 --- !u!1 &1142997968
 GameObject:
   m_ObjectHideFlags: 0

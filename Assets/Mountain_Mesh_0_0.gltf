@@ -1,0 +1,167 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.0.-1265191577)"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1048576,
+            "type": "VEC3",
+            "max": [
+                1024.0,
+                195.97039794921876,
+                1024.0
+            ],
+            "min": [
+                0.0,
+                63.057212829589847,
+                0.0
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1048576,
+            "type": "VEC3",
+            "max": [
+                0.9671239852905273,
+                1.0,
+                0.9672091007232666
+            ],
+            "min": [
+                -0.9825450778007507,
+                0.1830018013715744,
+                -0.9653021097183228
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1048576,
+            "type": "VEC2",
+            "max": [
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 1048576,
+            "type": "VEC4",
+            "max": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "min": [
+                0.20392157137393952,
+                0.20392157137393952,
+                0.20392157137393952,
+                0.20392157137393952
+            ]
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 6279174,
+            "type": "SCALAR",
+            "max": [
+                65535.0
+            ],
+            "min": [
+                0.0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 75448344,
+            "uri": "Mountain_Mesh_0_0.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 12582912,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 12582912,
+            "byteLength": 12582912,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 25165824,
+            "byteLength": 8388608,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 33554432,
+            "byteLength": 16777216,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 50331648,
+            "byteLength": 25116696,
+            "target": 34963
+        }
+    ],
+    "materials": [
+        {
+            "name": "Material",
+            "pbrMetallicRoughness": {
+                "metallicFactor": 0.0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Terrain",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 4,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2,
+                        "COLOR_0": 3
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "Root",
+            "mesh": 0
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}

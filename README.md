@@ -20,6 +20,7 @@ BioSync VR is a virtual reality meditation application that uses a Muse EEG head
 ### Mountain Scene
 - Snowy mountain environment with bonfire and tent
 - Weather changes (e.g., fog, snow intensity) based on focus level
+- a Bonfire with variable fire intensity
 
 ## How to Use
 
@@ -53,6 +54,8 @@ BioSync VR is a virtual reality meditation application that uses a Muse EEG head
 
 - Users using SteamVR or Virtual Desktop with a Quest standalone headset may have different button bindings. Check the button bindings set by SteamVR in the pause menu. Pause menu default controls should be (X+Y) on left controller.
 - This is a primarily stationary experience. Standing, sitting, or laying down is the expected method of experiencing BioSync VR. Unexpected behavior may occur if a user strays very far from the center of the meditative environment.
+- In the Mountain environment, the camera rotation may not follow the user's head rotation. This will be fixed in a hotfix soon.
+- Certain images do not show up in the main menu. Left image is the Beach, Right image is the mountain.
 
 ## Credits
 

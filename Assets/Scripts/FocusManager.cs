@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using DigitalRuby.RainMaker;
 using WaterSystem;
 
@@ -7,7 +6,8 @@ public class FocusManager : MonoBehaviour
 {
     public static FocusManager Instance;
 
-    [SerializeField] private byte[] receiveBuffer;
+    //[SerializeField] private byte[] receiveBuffer;
+    //[SerializeField] private ServerListener serverScript;
     [SerializeField] private Material skyboxMaterial;
     [SerializeField] private Cubemap sunnySkybox;
     [SerializeField] private Cubemap stormySkybox;
@@ -39,15 +39,27 @@ public class FocusManager : MonoBehaviour
         RenderSettings.skybox = skyboxMaterial;
 
         SetInitialFocusLevel();
-        receiveBuffer.onValueChanged.AddListener(UpdateFocusLevel);
+        
+    }
+	private void Update()
+    {
+        // Check for changes in the receiveBuffer
+        if (MyListener.output != null && MyListener.output > 0)
+        {
+            float newFocusLevel = MyListener.output;
+            if (newFocusLevel != focusLevel)
+            {
+                UpdateFocusLevel(newFocusLevel);
+            }
+        }
     }
 
     private void SetInitialFocusLevel()
     {
         focusLevel = Mathf.Clamp01(initialFocusLevel);
-        if (receiveBuffer != null)
+        //if (receiveBuffer != null && receiveBuffer.Length > 0)
         {
-            receiveBuffer.value = focusLevel;
+           // receiveBuffer[0] = (byte)(focusLevel * 255f);
         }
         UpdateSkyboxBlend();
         UpdateRainIntensity();
@@ -145,9 +157,9 @@ public class FocusManager : MonoBehaviour
     public void SetFocusLevel(float newLevel)
     {
         focusLevel = Mathf.Clamp01(newLevel);
-        if (receiveBuffer != null)
+        //if (receiveBuffer != null && receiveBuffer.Length > 0)
         {
-            receiveBuffer.value = focusLevel;
+           // receiveBuffer[0] = (byte)(focusLevel * 255f);
         }
         UpdateSkyboxBlend();
         UpdateRainIntensity();

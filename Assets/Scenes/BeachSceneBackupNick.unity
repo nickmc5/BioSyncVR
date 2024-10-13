@@ -989,7 +989,7 @@ Transform:
   m_GameObject: {fileID: 434434689}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1176, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1107,8 +1107,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1336105741}
+  m_Children: []
   m_Father: {fileID: 434434691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &505659304
@@ -1333,6 +1332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 525016586}
   - component: {fileID: 525016585}
+  - component: {fileID: 525016587}
   m_Layer: 0
   m_Name: FocusManager
   m_TagString: Untagged
@@ -1352,7 +1352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa6838b6245cf84e91f311070075374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusSlider: {fileID: 1366796618}
   skyboxMaterial: {fileID: 2100000, guid: 31959cc76ab50364daf10c9654cb852b, type: 2}
   sunnySkybox: {fileID: 8900000, guid: 99af420a4ccafa74abdc47436d8b0685, type: 3}
   stormySkybox: {fileID: 8900000, guid: 762f22ba43541df4e95e0e7126e8d96c, type: 3}
@@ -1376,6 +1375,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &525016587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525016584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3951420ff210791438c51619c9a35e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectionPort: 12345
 --- !u!1 &716386814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,66 +2197,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915265844}
   m_CullTransparentMesh: 1
---- !u!1 &948464228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 948464231}
-  - component: {fileID: 948464230}
-  - component: {fileID: 948464229}
-  m_Layer: 0
-  m_Name: UI Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &948464229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948464228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 669175840de8baa4093a9591480cd605, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ip: 127.0.0.1
-  port: 12345
-  myId: 0
---- !u!114 &948464230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948464228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 448c48af703330d4dbdbfac9b4bd9471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &948464231
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948464228}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.568583, y: 5.870167, z: 36.005604}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &966800341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,6 +2235,7 @@ Transform:
   - {fileID: 107160525}
   - {fileID: 543450652770729534}
   - {fileID: 543450653038594254}
+  - {fileID: 1336105741}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1062507228
@@ -2478,6 +2431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32737f6f45b0e604190b0e1d286b0132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsImage1Selected: 1
 --- !u!1 &1229278768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3641,12 +3595,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336105740}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 20}
+  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: -2.6068268, y: -7.14, z: 35.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 505659303}
+  m_Father: {fileID: 966800342}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 90}
 --- !u!199 &1336105742
 ParticleSystemRenderer:
@@ -3670,7 +3624,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
+  - {fileID: 2100000, guid: c8c162af3fac7f145b8d1295eff18b1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3714,7 +3668,7 @@ ParticleSystemRenderer:
   m_VertexStreams: 00010304
   m_UseCustomTrailVertexStreams: 0
   m_TrailVertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
@@ -8614,44 +8568,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 56271751}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &1477785179
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDepthMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1 &1536205883
 GameObject:
   m_ObjectHideFlags: 0
@@ -8984,6 +8900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32737f6f45b0e604190b0e1d286b0132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsImage1Selected: 1
 --- !u!114 &1624276936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9059,7 +8976,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 45.59, y: 0.43, z: 23.79}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 434434691}
@@ -9955,6 +9872,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!84 &2128633690
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterDepthMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1 &1000695783086616
 GameObject:
   m_ObjectHideFlags: 0
@@ -33373,7 +33328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   computeOverride: 0
-  _depthTex: {fileID: 1477785179}
+  _depthTex: {fileID: 2128633690}
   bakedDepthTex: {fileID: 0}
   _waves:
   - amplitude: 0.46319395
@@ -35908,6 +35863,7 @@ GameObject:
   - component: {fileID: 999623495055344641}
   - component: {fileID: 3043192051718451403}
   - component: {fileID: 4211072155865549733}
+  - component: {fileID: 4211072155865549734}
   m_Layer: 0
   m_Name: BeachGround
   m_TagString: Untagged
@@ -35962,6 +35918,28 @@ MonoBehaviour:
   RainHeight: 25
   RainForwardOffset: -7
   RainMistHeight: 3
+--- !u!64 &4211072155865549734
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547547312330363166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -462981019419857548, guid: 3ddc8c8b82bdeb64196e8bae848dcfec, type: 3}
 --- !u!23 &5305032401068746665
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36303,4 +36281,3 @@ SceneRoots:
   - {fileID: 1146323629}
   - {fileID: 2126020741}
   - {fileID: 525016586}
-  - {fileID: 948464231}

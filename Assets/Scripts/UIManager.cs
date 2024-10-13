@@ -29,6 +29,6 @@ public class UIManager : MonoBehaviour
     public void ConnectToServer()
     {
         //startMenu.SetActive(false);
-        Client.instance.ConnectToServer();
+        //Client.instance.ConnectToServer();
     }
 }

@@ -49,16 +49,16 @@ public class MtnFocusManager : MonoBehaviour
     private void SetInitialFocusLevel()
     {
         focusLevel = Mathf.Clamp01(initialFocusLevel);
-        UpdateAllEffects();
+        //UpdateAllEffects();
     }
 
     private void UpdateFocusLevel(float value)
     {
         focusLevel = value;
-        UpdateAllEffects();
+        //UpdateAllEffects();
     }
 
-    private void UpdateAllEffects()
+    private void Update()
     {
         UpdateSkyboxBlend();
         UpdateRainIntensity();
@@ -156,6 +156,6 @@ public class MtnFocusManager : MonoBehaviour
     public void SetFocusLevel(float newLevel)
     {
         focusLevel = Mathf.Clamp01(newLevel);
-        UpdateAllEffects();
+        //UpdateAllEffects();
     }
 }

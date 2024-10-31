@@ -7,7 +7,7 @@ using System.Threading;
 public class MyListener : MonoBehaviour
 {
     Thread thread;
-    public int connectionPort = 12345;
+    public int connectionPort = 49152;
     TcpListener server;
     TcpClient client;
     bool running;

@@ -7,7 +7,7 @@ public class MtnFocusManager : MonoBehaviour
 {
     public static MtnFocusManager Instance;
 
-    [SerializeField] private byte[] receiveBuffer;
+    //[SerializeField] private byte[] receiveBuffer;
     [SerializeField] private Material skyboxMaterial;
     [SerializeField] private Cubemap sunnySkybox;
     [SerializeField] private Cubemap stormySkybox;
@@ -46,6 +46,19 @@ public class MtnFocusManager : MonoBehaviour
         SetInitialFocusLevel();
     }
 
+    // private void Update()
+    // {
+    //     // Check for changes in the receiveBuffer
+    //     if (MyListener.output != null && MyListener.output > 0)
+    //     {
+    //         float newFocusLevel = MyListener.output;
+    //         if (newFocusLevel != focusLevel)
+    //         {
+    //             UpdateAllEffects();
+    //         }
+    //     }
+    // }
+
     private void SetInitialFocusLevel()
     {
         focusLevel = Mathf.Clamp01(initialFocusLevel);
@@ -60,6 +73,14 @@ public class MtnFocusManager : MonoBehaviour
 
     private void Update()
     {
+        if (MyListener.output != null && MyListener.output > 0)
+        {
+            float newFocusLevel = MyListener.output;
+            if (newFocusLevel != focusLevel)
+            {
+                UpdateFocusLevel(newFocusLevel);
+            }
+        }
         UpdateSkyboxBlend();
         UpdateRainIntensity();
         UpdateWindIntensity();

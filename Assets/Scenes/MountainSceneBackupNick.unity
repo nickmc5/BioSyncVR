@@ -1577,7 +1577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 490f348cebe636545b4b9552a7c1a682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receiveBuffer: 
   skyboxMaterial: {fileID: 2100000, guid: 31959cc76ab50364daf10c9654cb852b, type: 2}
   sunnySkybox: {fileID: 8900000, guid: 99af420a4ccafa74abdc47436d8b0685, type: 3}
   stormySkybox: {fileID: 8900000, guid: 762f22ba43541df4e95e0e7126e8d96c, type: 3}

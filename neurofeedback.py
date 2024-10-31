@@ -97,7 +97,7 @@ if __name__ == "__main__":
     print('Press Ctrl-C in the console to break the while loop.')
 
     connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    connection.connect(("127.0.0.1", 12345))
+    connection.connect(("127.0.0.1", 49152))
 
 
 

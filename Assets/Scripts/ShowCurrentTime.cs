@@ -16,17 +16,17 @@ public class ShowCurrentTime: MonoBehaviour
     string answer;
     if (t.Minutes > 9)
     {
-        answer = string.Format("{0:D2}: {1:D2}", 
+        answer = string.Format("{0:D2}:{1:D2}", 
                 t.Minutes, 
                 t.Seconds);
     }
     else
     {
-        answer = string.Format("{0:D1}: {1:D2}", 
+        answer = string.Format("{0:D1}:{1:D2}", 
                 t.Minutes, 
                 t.Seconds);
     }
     
-    timeText.SetText(answer);
+    timeText.SetText("Time left: " + answer);
   }
 }

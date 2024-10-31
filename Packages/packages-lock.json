@@ -249,16 +249,16 @@
       }
     },
     "org.khronos.unitygltf": {
-      "version": "https://github.com/KhronosGroup/UnityGLTF.git",
+      "version": "2.14.0",
       "depth": 0,
-      "source": "git",
+      "source": "registry",
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "2.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.shadergraph": "10.0.0",
         "com.unity.mathematics": "1.0.0"
       },
-      "hash": "39fef1b1ea20cb8518c245af5ca5967c5746a4bd"
+      "url": "https://packages.needle.tools"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Debug = UnityEngine.Debug;
 using Application = UnityEngine.Application;
 
-public class SessionRecorder : MonoBehaviour
+public class MtnSessionRecorder : MonoBehaviour
 {
     private string sessionsFolderPath;
     private string currentSessionPath;
@@ -13,7 +13,7 @@ public class SessionRecorder : MonoBehaviour
     private List<SessionDataPoint> sessionData;
     private float recordingInterval = 0.1f; // Record every 100ms
     private float nextRecordTime = 0f;
-    [SerializeField] private FocusManager focusManager;
+    [SerializeField] private MtnFocusManager focusManager;
 
     [Serializable]
     private class SessionDataPoint
@@ -52,7 +52,7 @@ public class SessionRecorder : MonoBehaviour
     {
         if (focusManager == null)
         {
-            focusManager = FocusManager.Instance;
+            focusManager = MtnFocusManager.Instance;
             if (focusManager == null)
             {
                 Debug.LogError("FocusManager not found. Please assign it in the inspector or ensure it exists in the scene.");

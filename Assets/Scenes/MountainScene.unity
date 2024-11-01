@@ -1577,7 +1577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 490f348cebe636545b4b9552a7c1a682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receiveBuffer: 
   skyboxMaterial: {fileID: 2100000, guid: 31959cc76ab50364daf10c9654cb852b, type: 2}
   sunnySkybox: {fileID: 8900000, guid: 99af420a4ccafa74abdc47436d8b0685, type: 3}
   stormySkybox: {fileID: 8900000, guid: 762f22ba43541df4e95e0e7126e8d96c, type: 3}
@@ -2948,6 +2947,7 @@ GameObject:
   - component: {fileID: 1146323629}
   - component: {fileID: 1146323630}
   - component: {fileID: 1146323631}
+  - component: {fileID: 1146323632}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -2997,6 +2997,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsImage1Selected: 1
+--- !u!114 &1146323632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146323628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477230aacc966b645aa96b608e4226a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusManager: {fileID: 525016587}
 --- !u!1 &1184006550
 GameObject:
   m_ObjectHideFlags: 0

@@ -356,16 +356,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 875356862}
+      - m_Target: {fileID: 875356864}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-        m_MethodName: Load
-        m_Mode: 1
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BeachScene
+          m_StringArgument: MainMenu
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &451410510
@@ -1621,7 +1621,7 @@ GameObject:
   - component: {fileID: 677038291}
   - component: {fileID: 677038290}
   m_Layer: 0
-  m_Name: Settings
+  m_Name: SessionLength
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2118,8 +2118,8 @@ GameObject:
   - component: {fileID: 875356860}
   - component: {fileID: 875356859}
   - component: {fileID: 875356858}
-  - component: {fileID: 875356862}
   - component: {fileID: 875356863}
+  - component: {fileID: 875356864}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2221,19 +2221,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 5}
   m_SizeDelta: {x: 400, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &875356862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875356857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32737f6f45b0e604190b0e1d286b0132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsImage1Selected: 1
 --- !u!114 &875356863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2247,6 +2234,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DataPanel: {fileID: 1159507588}
+--- !u!114 &875356864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875356857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32737f6f45b0e604190b0e1d286b0132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScene: 
+  IsImage1Selected: 1
 --- !u!1 &880684675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,7 +2823,7 @@ MonoBehaviour:
   image2: {fileID: 534139600}
   outline1: {fileID: 521492191}
   outline2: {fileID: 534139603}
-  sceneChanger: {fileID: 875356862}
+  sceneChanger: {fileID: 875356864}
 --- !u!1 &1142997968
 GameObject:
   m_ObjectHideFlags: 0

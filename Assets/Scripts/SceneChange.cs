@@ -5,23 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
+    public string currentScene;
     public bool IsImage1Selected = true;
 
-    public void Load()
+    private void Awake()
     {
-        if (IsImage1Selected)
-        {
-            LoadScene("BeachScene");
-        }
-        else
-        {
-            LoadScene("MountainScene");
-        }
+        DontDestroyOnLoad(gameObject);
     }
+
+    private void Start() 
+    {
+        currentScene = "MainMenu";
+    }
+
+    // public void Load()
+    // {
+    //     if (IsImage1Selected)
+    //     {
+    //         LoadScene("BeachScene");
+    //         currentScene = "BeachScene";
+    //     }
+    //     else
+    //     {
+    //         LoadScene("MountainScene");
+    //         currentScene = "MountainScene";
+    //     }
+    // }
 
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        currentScene = sceneName;
         Debug.Log("Loading scene: " + sceneName);
         if (sceneName == "BeachScene" || sceneName == "MountainScene")
         {
@@ -32,6 +46,7 @@ public class SceneChange : MonoBehaviour
     public void UnloadScene(string sceneName)
     {
         SceneManager.UnloadScene(sceneName);
+        currentScene = "None";
         Debug.Log("Unloading scene: " + sceneName);
     }
 }

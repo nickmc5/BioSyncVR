@@ -11,7 +11,7 @@ public class SessionRecorder : MonoBehaviour
     private string currentSessionPath;
     private bool isRecording = false;
     private List<SessionDataPoint> sessionData;
-    private float recordingInterval = 0.1f; // Record every 100ms
+    private float recordingInterval = 1.0f; // Record every 1000ms
     private float nextRecordTime = 0f;
     [SerializeField] private FocusManager focusManager;
 

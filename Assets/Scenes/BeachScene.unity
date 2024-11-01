@@ -2531,6 +2531,7 @@ GameObject:
   - component: {fileID: 1146323629}
   - component: {fileID: 1146323630}
   - component: {fileID: 1146323631}
+  - component: {fileID: 1146323632}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Untagged
@@ -2580,6 +2581,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsImage1Selected: 1
+--- !u!114 &1146323632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146323628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c97ae46b602bfb2488ded71c7377f05a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusManager: {fileID: 525016585}
 --- !u!1 &1229278768
 GameObject:
   m_ObjectHideFlags: 0

@@ -74,3 +74,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+*.meta
+Assets/DummySessionGenerator.cs
+Assets/StreamingAssets/build_info.txt
+Assets/XR/Settings/OpenXR Package Settings.asset
+ProjectSettings/QualitySettings.asset

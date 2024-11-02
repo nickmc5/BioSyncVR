@@ -12,6 +12,6 @@ public class ToggleData : MonoBehaviour
     }
     public void ToggleDataMenu()
     {
-        DataPanel.SetActive(!DataPanel.activeSelf);
+        DataPanel.gameObject.SetActive(true);
     }
 }

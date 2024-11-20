@@ -6,6 +6,7 @@ using System.Threading;
 
 public class MyListener : MonoBehaviour
 {
+    public static MyListener Instance;
     Thread thread;
     public int connectionPort = 49152;
     TcpListener server;
@@ -13,6 +14,18 @@ public class MyListener : MonoBehaviour
     bool running;
     public static float output;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
